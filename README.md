@@ -7,8 +7,16 @@ role is my json data stock folder
 ## Usage
 fetch or xhr access
 ```js
-fetch().then((d)=>{ console.log(d) });
-getJson().then((d)=>{ console.log(d) });
+ var f=function(e='',t=''){return e+t},
+      url=f('https://raw.githubusercontent.com/wawho/json/master/','test.json')
+ 
+ fetch(url).then(function(response) {return response.json() })
+  .then(function(json){console.log('fetch',json) })
+  .catch((d)=>{ console.log('err fetch',d) });
+ 
+ getJson(url)
+  .then(function(json){console.log('getJson',json) })
+  .catch((d)=>{ console.log('err getJson',d) });
 ```
 fetch is pure ES.
 if !fetch
