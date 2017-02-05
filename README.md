@@ -2,8 +2,12 @@
 wawho json data stock
 --------
 ## whats this?
-role is my json data stock folder
+role is my json data stock.
 
+endpoint:
+```
+https://raw.githubusercontent.com/wawho/json/master/
+```
 ## Usage Demo
 https://codepen.io/kunigamaeno/pen/LxrLZE/
 
