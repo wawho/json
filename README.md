@@ -12,7 +12,27 @@ getJson().then((d)=>{ console.log(d) });
 ```
 fetch is pure ES.
 if !fetch
-tiny function make this:
+tiny function make this: getJson()
 ```js
-getJson().then(()=>{})
+var getJson = function(url){
+  return new Promise(function(sol,rej){ 
+   var xhr = new XMLHttpRequest();
+   xhr.onreadystatechange = function(){ 
+    if( this.readyState == 4){ 
+     if( this.status == 200|| this.status==0) sol( this.response);
+     else rej(this.response);
+    }
+   }
+   xhr.open( 'GET',url, true );xhr.responseType = 'json';xhr.send( null );
+   });//
+}
 ```
+
+## Note
+here is json data only.
+main project user kunigamaeno.
+ - https://github.com/kunigamaeno/temp/
+ - https://github.com/kunigamaeno/
+
+## Other
+__LIC,MIT.__
