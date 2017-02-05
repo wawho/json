@@ -15,7 +15,8 @@ https://codepen.io/kunigamaeno/pen/LxrLZE/
 fetch or xhr access
 ```js
  var f=function(e='',t=''){return e+t},
-      url=f('https://raw.githubusercontent.com/wawho/json/master/','test.json')
+      endpoint='https://raw.githubusercontent.com/wawho/json/master/',
+      url=f(endpoint,'test.json');
  
  fetch(url).then(function(response) {return response.json() })
   .then(function(json){console.log('fetch',json) })
