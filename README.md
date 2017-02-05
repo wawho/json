@@ -4,6 +4,9 @@ wawho json data stock
 ## whats this?
 role is my json data stock folder
 
+## Usage Demo
+https://codepen.io/kunigamaeno/pen/LxrLZE/
+
 ## Usage
 fetch or xhr access
 ```js
